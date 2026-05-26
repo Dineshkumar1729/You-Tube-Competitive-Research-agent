@@ -1,0 +1,6 @@
+{
+  "name": "AI YouTube Competitor Research Agent",
+  "description": "An autonomous AI research agent and strategic planner analyzing AI YouTube creators to generate growth strategies.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

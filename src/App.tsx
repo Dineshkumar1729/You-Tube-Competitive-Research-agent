@@ -48,6 +48,7 @@ import { CreatorChannel, ResearchRun, Video } from './types';
 export default function App() {
   // Global Application State  
   const [creators, setCreators] = useState<CreatorChannel[]>([]);
+  const clearDashboard = () => {setCreators([])};
   const [historicalRuns, setHistoricalRuns] = useState<ResearchRun[]>([]);
   const [selectedRun, setSelectedRun] = useState<ResearchRun | null>(null);
   const [selectedChannelIds, setSelectedChannelIds] = useState<string[]>([]);
@@ -366,6 +367,13 @@ export default function App() {
             >
               <Plus className="w-3.5 h-3.5" /> Inject Creator
             </button>
+            <button
+              onClick={clearDashboard}
+              className="px-3 py-1.5 rounded-lg text-xs font-semibold bg-red-600 hover:bg-red-500 border border-red-500 text-white transition"
+              title="Permanently clear all stored creators and analysis runs">
+              Clear
+            </button>
+
             <button
               onClick={refreshState}
               className="p-2 rounded-lg text-slate-400 hover:text-white bg-slate-800 hover:bg-slate-700 border border-slate-700 transition"
